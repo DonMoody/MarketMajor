@@ -459,7 +459,7 @@ nav li a:hover
 {
   opacity: 0.5;
 }
-grid
+.grid
 {
   grid-template-columns: auto auto auto;
   grid-gap: 30px;
