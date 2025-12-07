@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Market Major</title>
+    <title>About Us | Market Major</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Market Major is a website dedicated to connecting local business owners to the markets here on Hawaii Island.">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin=" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles/styles.css">
 
@@ -16,7 +16,6 @@
 
 <body>
     <a class="skip" href="#content">Skip to Content</a>
-
     <div id="wrapper">
 
         <header>
@@ -40,34 +39,54 @@
                 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav custom-nav-links">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="locations.html">Event Finder</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="links.html">Business Links</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="locations.html">Event Finder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="links.html">Business Links</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
         <main id="content" class="container my-5">
-            <div id="welcome" class="p-3">
-                <p>The team at Market Major Hawaii is ecstatic to train and develop your small business skills through our broad range of small business tools.</p>
-
-                <p>By joining our membership and receiving the guidance our website, you will have the knowledge and tools to build your own small business.</p>
-
-                <p>It's time to take control of your life and start your small business today!!</p>
+            <div class="p-3 text-center mb-5">
+                <p class="lead">The team at Market Major Hawaii is ecstatic to train and develop your small business skills through our broad range of small business tools.</p>
+                <p class="lead">By joining our membership and receiving the guidance our website, you will have the knowledge and tools to build your own small business</p>
+                <p class="action">It's time to take control of your life and start your small business today!!</p>
+                
+                <a href="locations.html" class="btn btn-lg btn-dark mt-4 custom-nav-bg">
+                    Start by Finding a Market!
+                </a>
             </div>
-        </main>
+
+            <hr class="my-5">
+            <h2 class="text-center mb-4">Your Path to Local Business Success</h2>
+
+            <div class="row text-center mb-5">
+                
+                <div class="col-md-4 mb-4">
+                    <img src="images/deal.png" alt="Map icon" class="img-fluid mb-3" style="width: 80px;">
+                    <h3>Locate Markets</h3>
+                    <p>Use our interactive event finder to instantly locate farmers markets and local events across the Big Island.</p>
+                    <a href="locations.html" class="link">Explore Events &rarr;</a>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <img src="images/customer-buying.png" alt="Customer Buying" class="img-fluid mb-3" style="width: 80px;">
+                    <h3>Connect with Customers</h3>
+                    <p>Learn strategies and gain acces to links that will help you start your busines, reach your ideal customer, know your market, and access resources designed to create succes in your small business endevours.</p>
+                    <a href="links.html" class="link">View Business Links &rarr;</a>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <img src="images/success.png" alt="Success icon" class="img-fluid mb-3" style="width: 80px;">
+                    <h3>Learn & Succeed</h3>
+                    <p>Gain knowledge into why Market Major was created with this inspirational content about our creaters personal success.</p>
+                    <a href="about.html" class="link">Read Our Mission &rarr;</a>
+                </div>
+            </div>
+            </main>
 
         <footer class="text-center py-3 custom-footer-bg">
             <div class="container">
@@ -91,13 +110,10 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
-            </footer>
-
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
