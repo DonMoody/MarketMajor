@@ -121,6 +121,11 @@ main h3 {
   border-radius: 6px;
 }
 
+/* Specific fix for the Contact page phone link card */
+.tel-link-fix {
+    max-width: 300px;
+}
+
 /* ------------------------------ */
 /* FOOTER                         */
 /* ------------------------------ */
@@ -152,9 +157,8 @@ main h3 {
 }
 
 /* ------------------------------ */
-/* MAP / LOCATION STYLES          */
+/* MAP / LOCATION STYLES (CRUCIAL FIX) */
 /* ------------------------------ */
-/* Added back these missing styles for completeness */
 
 .location-wrapper {
   max-width: 900px;
@@ -168,7 +172,7 @@ main h3 {
 
 .map-container {
   width: 100%;
-  height: 350px;
+  height: 350px; /* <--- CRITICAL HEIGHT FOR MAP TO DISPLAY */
   border: 3px solid #2a1f14;
   border-radius: 8px;
   overflow: hidden;
@@ -180,6 +184,7 @@ main h3 {
   height: 100%;
 }
 
+/* Styling for the dynamically loaded text on the location page */
 .location-info {
   text-align: center;
   font-size: 1.25em;
@@ -188,32 +193,31 @@ main h3 {
   color: #2a1f14;
 }
 
+/* Styling for the button container */
 .location-nav-buttons {
   text-align: center;
 }
 
-.location-nav-buttons button {
+/* Ensuring the Bootstrap buttons look correct within the dark theme */
+.location-nav-buttons .btn-dark {
+  /* Overriding default Bootstrap dark button color if needed, but keeping for consistency */
+  color: #f6eee4; /* Light text on dark button */
   background-color: #2a1f14;
-  color: #f6eee4;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  font-size: 1.1em;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+  border-color: #2a1f14;
 }
 
-.location-nav-buttons button:hover {
-  opacity: 0.7;
+.location-nav-buttons .btn-dark:hover {
+  background-color: #4d3319;
+  border-color: #4d3319;
+  opacity: 1; /* Ensure hover state is visible */
 }
+
 
 /* ------------------------------ */
 /* MEDIA QUERIES ADJUSTED         */
 /* ------------------------------ */
 
 @media screen and (min-width: 481px) {
-  /* Removed old .mobile and .tab-desk rules */
   
   form { width: 70%; margin: 0 auto; }
   
