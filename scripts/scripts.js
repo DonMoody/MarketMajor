@@ -27,25 +27,31 @@ function menu() {
 // Map + Locations
 // -------------------------
 
-// List of locations
+// List of locations - UPDATED WITH DAY AND TIME
 const locations = [
   {
     name: "Hilo Farmers Market",
     address: "Mamo St, Hilo, HI 96720",
     lat: 19.7235,
-    lng: -155.0848
+    lng: -155.0848,
+    day: "Friday",
+    time: "5:00 PM - 9:00 PM"
   },
   {
     name: "Kona Farmers Market",
     address: "Ali‘i Dr, Kailua-Kona, HI",
     lat: 19.6403,
-    lng: -155.9956
+    lng: -155.9956,
+    day: "Wednesday - Sunday", // Kept from previous suggestion
+    time: "7:00 AM - 4:00 PM"  // Kept from previous suggestion
   },
   {
     name: "Waimea Town Market",
     address: "Parker School, Waimea, HI",
     lat: 20.0200,
-    lng: -155.6710
+    lng: -155.6710,
+    day: "Saturday", // Kept from previous suggestion
+    time: "7:30 AM - 12:00 PM" // Kept from previous suggestion
   }
 ];
 
@@ -81,9 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get location info elements
     const nameEl = document.getElementById("locationName");
     const addrEl = document.getElementById("address");
+    
+    // NEW: Get day and time elements
+    const dayEl = document.getElementById("day");
+    const timeEl = document.getElementById("time");
 
     if (nameEl) nameEl.textContent = loc.name;
     if (addrEl) addrEl.textContent = loc.address;
+    
+    // NEW: Update day and time content
+    if (dayEl) dayEl.textContent = "Day: " + loc.day;
+    if (timeEl) timeEl.textContent = "Time: " + loc.time;
 
     map.setView([loc.lat, loc.lng], 13);
     marker.setLatLng([loc.lat, loc.lng]);
