@@ -56,8 +56,8 @@ const locations = [
   {
     name: "Keaau Cougar Market",
     address: "Keaau High School",
-    lat: 19.61031, // Coordinates found via search
-    lng: -155.00281,
+    lat: 19.6125, // Coordinates found via search
+    lng: -155.0317,
     day: "Wednesday",
     time: "3:00 PM - 8:00 PM"
   },
@@ -67,7 +67,7 @@ const locations = [
     lat: 19.62132, // Coordinates found via search
     lng: -155.03941,
     day: "Second Saturday of the Month",
-    time: "Varies - Check Local Listings" // Set as Varies since specific time wasn't given
+    time: "10:00am - 5:00pm" // Set as Varies since specific time wasn't given
   }
 ];
 
