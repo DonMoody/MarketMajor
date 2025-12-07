@@ -30,7 +30,27 @@ img {
 }
 
 /* ------------------------------ */
-/* HEADER IMAGE & OVERLAY         */
+/* SITE TITLE / TAGLINE           */
+/* ------------------------------ */
+
+.custom-title-bg {
+    background-color: #f6eee4; /* Matches body background */
+}
+
+.h1-title-fix {
+    font-size: 2.5rem; /* Set a consistent large size */
+    color: #2a1f14;
+    margin: 0;
+}
+
+.h3-tagline-fix {
+    font-size: 1.5rem; /* Set a consistent smaller size */
+    color: #4d3319;
+    margin-bottom: 0;
+}
+
+/* ------------------------------ */
+/* HEADER IMAGE                   */
 /* ------------------------------ */
 
 header {
@@ -43,26 +63,6 @@ header {
   display: block;
 }
 
-/* Custom styling for the mobile header text overlay */
-.header-text-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-    padding: 10px 0;
-    text-align: center;
-}
-
-.header-text-overlay h1 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-.header-text-overlay h3 {
-    font-size: 1.2rem;
-    margin: 0;
-}
 
 /* ------------------------------ */
 /* BOOTSTRAP NAVIGATION CUSTOM    */
@@ -93,7 +93,6 @@ header {
 /* ------------------------------ */
 
 main {
-  /* Removed padding: 2% since Bootstrap container handles spacing, added custom class .my-5 in HTML */
   font-family: "Lora", serif;
 }
 
@@ -152,46 +151,73 @@ main h3 {
     transform: scale(1.1);
 }
 
-.site-title-container {
-    padding: 15px 0; /* Add padding above and below title */
-    background-color: #f6eee4; /* Match body background */
-}
-
-.site-title {
-    font-size: 2.5rem; /* Larger font for main title */
-    color: #2a1f14; /* Dark color */
-    margin: 0;
-}
-
-.site-tagline {
-    font-size: 1.5rem; /* Smaller font for tagline */
-    color: #4d3319; /* Slightly lighter dark color */
-    margin: 0;
-}
-
 /* ------------------------------ */
-/* HEADER IMAGE & OVERLAY (Cleaned up) */
+/* MAP / LOCATION STYLES          */
 /* ------------------------------ */
+/* Added back these missing styles for completeness */
 
-header {
-    position: relative;
-    /* Removed the header-text-overlay styles as we moved the text out of the header */
+.location-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 1rem;
+  background-color: #fff4e6;
+  border: 2px solid #2a1f14;
+  box-shadow: 4px 4px 12px #c5a687;
+  border-radius: 8px;
 }
 
-.header-img {
+.map-container {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 350px;
+  border: 3px solid #2a1f14;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
-/* Remove custom navigation media queries since Bootstrap handles it */
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.location-info {
+  text-align: center;
+  font-size: 1.25em;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #2a1f14;
+}
+
+.location-nav-buttons {
+  text-align: center;
+}
+
+.location-nav-buttons button {
+  background-color: #2a1f14;
+  color: #f6eee4;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.location-nav-buttons button:hover {
+  opacity: 0.7;
+}
+
+/* ------------------------------ */
+/* MEDIA QUERIES ADJUSTED         */
+/* ------------------------------ */
+
 @media screen and (min-width: 481px) {
-  /* .mobile-nav, .tab-desk, .main-nav rules removed/simplified */
+  /* Removed old .mobile and .tab-desk rules */
   
   form { width: 70%; margin: 0 auto; }
   
-  /* Footer rules removed as Bootstrap grid handles float/width */
-
+  /* Retaining grid for non-Bootstrap elements */
   .grid {
     display: grid;
     grid-template-columns: auto auto;
@@ -235,7 +261,6 @@ header {
   }
 
   #wrapper {
-    /* Set wrapper width or use Bootstrap container-xl/xxl in HTML */
     max-width: 1920px;
     margin: 0 auto;
   }
