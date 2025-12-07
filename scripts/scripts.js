@@ -27,7 +27,7 @@ function menu() {
 // Map + Locations
 // -------------------------
 
-// List of locations - UPDATED WITH DAY AND TIME
+// List of locations - UPDATED WITH DAY, TIME, AND TWO NEW MARKETS
 const locations = [
   {
     name: "Hilo Farmers Market",
@@ -42,16 +42,32 @@ const locations = [
     address: "Ali‘i Dr, Kailua-Kona, HI",
     lat: 19.6403,
     lng: -155.9956,
-    day: "Wednesday - Sunday", // Kept from previous suggestion
-    time: "7:00 AM - 4:00 PM"  // Kept from previous suggestion
+    day: "Wednesday - Sunday",
+    time: "7:00 AM - 4:00 PM"
   },
   {
     name: "Waimea Town Market",
     address: "Parker School, Waimea, HI",
     lat: 20.0200,
     lng: -155.6710,
-    day: "Saturday", // Kept from previous suggestion
-    time: "7:30 AM - 12:00 PM" // Kept from previous suggestion
+    day: "Saturday",
+    time: "7:30 AM - 12:00 PM"
+  },
+  {
+    name: "Keaau Cougar Market",
+    address: "Keaau High School",
+    lat: 19.61031, // Coordinates found via search
+    lng: -155.00281,
+    day: "Wednesday",
+    time: "3:00 PM - 8:00 PM"
+  },
+  {
+    name: "The Barn Market",
+    address: "16-1772 Keaau Pahoa Hwy, Hawaii",
+    lat: 19.62132, // Coordinates found via search
+    lng: -155.03941,
+    day: "Second Saturday of the Month",
+    time: "Varies - Check Local Listings" // Set as Varies since specific time wasn't given
   }
 ];
 
@@ -76,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let marker = L.marker([locations[0].lat, locations[0].lng]).addTo(map);
 
   // Get button elements
-  // CHANGED IDs to match locations.html: prev-btn and next-btn
   const nextBtn = document.getElementById("next-btn");
   const prevBtn = document.getElementById("prev-btn");
 
@@ -88,14 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nameEl = document.getElementById("locationName");
     const addrEl = document.getElementById("address");
     
-    // NEW: Get day and time elements
+    // Get day and time elements (MUST EXIST IN locations.html)
     const dayEl = document.getElementById("day");
     const timeEl = document.getElementById("time");
 
     if (nameEl) nameEl.textContent = loc.name;
     if (addrEl) addrEl.textContent = loc.address;
     
-    // NEW: Update day and time content
+    // Update day and time content
     if (dayEl) dayEl.textContent = "Day: " + loc.day;
     if (timeEl) timeEl.textContent = "Time: " + loc.time;
 
