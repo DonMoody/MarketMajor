@@ -32,13 +32,15 @@ img {
 }
 
 .h1-title-fix {
-    font-size: 2.5rem; 
+    font-size: 8rem; 
     color: #2ad04c;
     margin: 0;
     border: 3px solid #000000;
-    padding: 10px 20px; 
-    display: inline-block; 
-    border-radius: 5px; 
+    text-shadow: 
+        -3px -3px 0 #000,  
+         3px -3px 0 #000,
+        -3px  3px 0 #000,
+         3px  3px 0 #000; 
 }
 
 .h3-tagline-fix {
