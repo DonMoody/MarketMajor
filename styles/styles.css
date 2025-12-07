@@ -236,6 +236,22 @@ main h3 {
   }
 }
 
+@media screen and (max-width: 768px) {
+    
+    .h1-title-fix {
+        font-size: 4rem; 
+        text-shadow: 
+            -2px -2px 0 #000,  
+             2px -2px 0 #000,
+            -2px  2px 0 #000,
+             2px  2px 0 #000;
+    }
+    
+    .h3-tagline-fix {
+        font-size: 1.2rem;
+    }
+}
+
 
 @media screen and (min-width: 1000px) {
   
