@@ -5,14 +5,15 @@ Date: 11/16/2025
 */
 
 
-//Global variables
-var answer = document.querySelector("#answer p");
-var heading = document.querySelector("#answer h2");
-
-// Hamburger menu
+// -------------------------
+// Hamburger Menu
+// -------------------------
 function menu() {
-   var navlinks = document.getElementById("nav-links");
-   var menuicon = document.getElementById("icon");
+   const navlinks = document.getElementById("nav-links");
+   const menuicon = document.getElementById("icon");
+
+   if (!navlinks || !menuicon) return;
+
    if (navlinks.style.display === "block") {
        navlinks.style.display = "none";
        menuicon.style.color = "#2a1f14";
@@ -22,51 +23,9 @@ function menu() {
    }
 }
 
-function ans1() {
- var answer = document.getElementById("answer1");
- if (answer.style.display === "block") {
-   answer.style.display = "none";
- } else {
-   answer.innerHTML = msg1;
-   answer.style.display = "block";
- }
-}
-
-function ans2() {
- var answer = document.getElementById("answer2");
- if (answer.style.display === "block") {
-   answer.style.display = "none";
- } else {
-   answer.innerHTML = msg2;
-   answer.style.display = "block";
- }
-}
-
-function ans3() {
- var answer = document.getElementById("answer3");
- if (answer.style.display === "block") {
-   answer.style.display = "none";
- } else {
-   answer.innerHTML = msg3;
-   answer.style.display = "block";
- }
-}
-
-function ans4() {
- var answer = document.getElementById("answer4");
- if (answer.style.display === "block") {
-   answer.style.display = "none";
- } else {
-   answer.innerHTML = msg4;
-   answer.style.display = "block";
- }
-}
-
-
-
-// ======================
-// Location Map Script
-// ======================
+// -------------------------
+// Map + Locations
+// -------------------------
 
 // List of locations
 const locations = [
@@ -92,10 +51,13 @@ const locations = [
 
 let index = 0;
 
-// **Only run map code if #map exists on this page**
+// Run only after the page loads
 document.addEventListener("DOMContentLoaded", () => {
+
   const mapElement = document.getElementById("map");
-  if (!mapElement) return; // prevents errors on pages without maps
+
+  // If this page does not contain a map, STOP here.
+  if (!mapElement) return;
 
   // Create map
   const map = L.map("map").setView([locations[0].lat, locations[0].lng], 13);
@@ -106,30 +68,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let marker = L.marker([locations[0].lat, locations[0].lng]).addTo(map);
 
-  // Update map + UI
+  // Update location on screen + map
   function updateLocation() {
     const loc = locations[index];
 
-    document.getElementById("locationName").textContent = loc.name;
-    document.getElementById("address").textContent = loc.address;
+    const nameEl = document.getElementById("locationName");
+    const addrEl = document.getElementById("address");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    if (nameEl) nameEl.textContent = loc.name;
+    if (addrEl) addrEl.textContent = loc.address;
 
     map.setView([loc.lat, loc.lng], 13);
     marker.setLatLng([loc.lat, loc.lng]);
 
-    document.getElementById("prevBtn").disabled = index === 0;
-    document.getElementById("nextBtn").disabled = index === locations.length - 1;
+    if (prevBtn) prevBtn.disabled = index === 0;
+    if (nextBtn) nextBtn.disabled = index === locations.length - 1;
   }
 
   updateLocation();
 
-  // Buttons
-  document.getElementById("nextBtn").onclick = () => {
-    if (index < locations.length - 1) index++;
-    updateLocation();
-  };
+  // Next / Previous buttons (only if present)
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
 
-  document.getElementById("prevBtn").onclick = () => {
-    if (index > 0) index--;
-    updateLocation();
-  };
+  if (nextBtn) {
+    nextBtn.onclick = () => {
+      if (index < locations.length - 1) {
+        index++;
+        updateLocation();
+      }
+    };
+  }
+
+  if (prevBtn) {
+    prevBtn.onclick = () => {
+      if (index > 0) {
+        index--;
+        updateLocation();
+      }
+    };
+  }
+
 });
