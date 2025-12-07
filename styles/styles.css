@@ -239,7 +239,7 @@ main h3 {
     display: block; 
     margin: 0 auto 10px auto; 
 
-    transform: scale(1.5);
+    transform: scale(3.0);
     
     /* Ensures the image scales to fit without distortion */
     object-fit: contain;
