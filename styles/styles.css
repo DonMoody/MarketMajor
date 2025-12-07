@@ -232,12 +232,14 @@ main h3 {
 
 .pillar-icon {
     /* Set to match the .business-logo size */
-    width: 450px;  
-    height: 300px;
+    width: 150px;  
+    height: 100px;
     
     /* Center the image block horizontally */
     display: block; 
     margin: 0 auto 10px auto; 
+
+    transform: scale(1.5);
     
     /* Ensures the image scales to fit without distortion */
     object-fit: contain;
