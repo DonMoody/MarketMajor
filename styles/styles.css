@@ -157,7 +157,7 @@ main h3 {
 }
 
 /* ------------------------------ */
-/* MAP / LOCATION STYLES (CRUCIAL FIX) */
+/* MAP / LOCATION STYLES (FINAL ATTEMPT FIX) */
 /* ------------------------------ */
 
 .location-wrapper {
@@ -172,16 +172,20 @@ main h3 {
 
 .map-container {
   width: 100%;
-  height: 350px; /* <--- CRITICAL HEIGHT FOR MAP TO DISPLAY */
+  height: 350px; /* CRITICAL HEIGHT */
   border: 3px solid #2a1f14;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 1rem;
+  position: relative; /* ENSURE CORRECT STACKING CONTEXT */
+  z-index: 1; /* ENSURE IT'S ABOVE BACKGROUNDS/OTHER ELEMENTS */
 }
 
 #map {
   width: 100%;
   height: 100%;
+  position: relative; /* ESSENTIAL for Leaflet's internal rendering */
+  z-index: 1; /* ENSURE IT'S ON TOP */
 }
 
 /* Styling for the dynamically loaded text on the location page */
@@ -200,7 +204,6 @@ main h3 {
 
 /* Ensuring the Bootstrap buttons look correct within the dark theme */
 .location-nav-buttons .btn-dark {
-  /* Overriding default Bootstrap dark button color if needed, but keeping for consistency */
   color: #f6eee4; /* Light text on dark button */
   background-color: #2a1f14;
   border-color: #2a1f14;
@@ -214,7 +217,7 @@ main h3 {
 
 
 /* ------------------------------ */
-/* MEDIA QUERIES ADJUSTED         */
+/* MEDIA QUERIES ADJUSTTED         */
 /* ------------------------------ */
 
 @media screen and (min-width: 481px) {
