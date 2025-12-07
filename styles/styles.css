@@ -82,7 +82,7 @@ header {
 
 .custom-nav-links .nav-link:hover,
 .custom-nav-links .nav-link.active {
-    background-color: #fff200; /* Slightly different color for hover/active */
+    background-color: #b4ab03; /* Slightly different color for hover/active */
     color: #f6eee4;
 }
 
@@ -103,7 +103,7 @@ main h3 {
 }
 
 .link, .footer-link {
-  color: #d6cf4b;
+  color: #2f9b2d;
   text-decoration: none;
   font-weight: bold;
   font-style: italic;
