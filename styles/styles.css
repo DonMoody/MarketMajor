@@ -20,7 +20,7 @@ img {
 }
 .skip:focus {
   color: #fff;
-  background-color: #2a1f14;
+  background-color: #2ad04c;
   text-decoration: none;
   padding: 0.5%;
   right: 1px;
@@ -37,13 +37,13 @@ img {
 
 .h1-title-fix {
     font-size: 2.5rem; /* Set a consistent large size */
-    color: #2a1f14;
+    color: #d6cf4b;
     margin: 0;
 }
 
 .h3-tagline-fix {
     font-size: 1.5rem; /* Set a consistent smaller size */
-    color: #4d3319;
+    color: #2ad04c;
     margin-bottom: 0;
 }
 
@@ -68,7 +68,7 @@ header {
 
 /* Target the custom background color for the navbar */
 .custom-nav-bg {
-    background-color: #36261b !important;
+    background-color: #2ad04c !important;
 }
 
 /* Custom styles for the nav links to match your original design */
@@ -82,7 +82,7 @@ header {
 
 .custom-nav-links .nav-link:hover,
 .custom-nav-links .nav-link.active {
-    background-color: #4d3319; /* Slightly different color for hover/active */
+    background-color: #d6cf4b; /* Slightly different color for hover/active */
     color: #f6eee4;
 }
 
@@ -103,7 +103,7 @@ main h3 {
 }
 
 .link, .footer-link {
-  color: #4d3319;
+  color: #d6cf4b;
   text-decoration: none;
   font-weight: bold;
   font-style: italic;
@@ -129,7 +129,7 @@ main h3 {
 /* ------------------------------ */
 
 .custom-footer-bg {
-  background-color: #2a1f14;
+  background-color: #2ad04c;
   color: #f6eee4;
   font-size: 0.85em;
 }
@@ -171,7 +171,7 @@ main h3 {
 .map-container {
   width: 100%;
   height: 350px; /* CRITICAL HEIGHT */
-  border: 3px solid #2a1f14;
+  border: 3px solid #000000;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -192,7 +192,7 @@ main h3 {
   font-size: 1.25em;
   margin-bottom: 1rem;
   font-weight: bold;
-  color: #2a1f14;
+  color: #000000;
 }
 
 /* Styling for the button container */
@@ -203,13 +203,13 @@ main h3 {
 /* Ensuring the Bootstrap buttons look correct within the dark theme */
 .location-nav-buttons .btn-dark {
   color: #f6eee4; /* Light text on dark button */
-  background-color: #2a1f14;
-  border-color: #2a1f14;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .location-nav-buttons .btn-dark:hover {
-  background-color: #4d3319;
-  border-color: #4d3319;
+  background-color: #6ac482;
+  border-color: #6ac482;
   opacity: 1; /* Ensure hover state is visible */
 }
 
@@ -294,7 +294,7 @@ main h3 {
 @media screen and (min-width: 1921px) {
 
   body {
-    background: linear-gradient(#f6eee4, #78593a);
+    background: linear-gradient(#f6eee4, #2ad04c);
   }
 
   #wrapper {
