@@ -131,6 +131,26 @@ figcaption {
   font-weight: bold;
 }
 
+.mobile {
+    text-align: center;
+}
+
+.mobile h1,
+.mobile h3 {
+    margin: 0 auto;
+}
+
+
+.mobile h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.mobile h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
 /* ------------------------------ */
 /* FOOTER                         */
 /* ------------------------------ */
