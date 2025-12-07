@@ -47,6 +47,11 @@ img {
     font-size: 1.5rem; 
     color: #2ad04c;
     margin-bottom: 0;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 
