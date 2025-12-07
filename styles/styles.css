@@ -13,7 +13,6 @@ img {
   display: block;
 }
 
-/* Skip link */
 .skip {
   position: absolute;
   left: -999px;
@@ -24,32 +23,26 @@ img {
   text-decoration: none;
   padding: 0.5%;
   right: 1px;
-  z-index: 1050; /* Ensure skip link is on top of Bootstrap components */
+  z-index: 1050; 
 }
 
-/* ------------------------------ */
-/* SITE TITLE / TAGLINE           */
-/* ------------------------------ */
 
 .custom-title-bg {
-    background-color: #ffffff; /* Matches body background */
+    background-color: #ffffff; 
 }
 
 .h1-title-fix {
-    font-size: 2.5rem; /* Set a consistent large size */
+    font-size: 2.5rem; 
     color: #2ad04c;
     margin: 0;
 }
 
 .h3-tagline-fix {
-    font-size: 1.5rem; /* Set a consistent smaller size */
+    font-size: 1.5rem; 
     color: #2ad04c;
     margin-bottom: 0;
 }
 
-/* ------------------------------ */
-/* HEADER IMAGE                   */
-/* ------------------------------ */
 
 header {
     position: relative;
@@ -62,33 +55,25 @@ header {
 }
 
 
-/* ------------------------------ */
-/* BOOTSTRAP NAVIGATION CUSTOM    */
-/* ------------------------------ */
-
-/* Target the custom background color for the navbar */
 .custom-nav-bg {
     background-color: #2ad04c !important;
 }
 
-/* Custom styles for the nav links to match your original design */
+
 .custom-nav-links .nav-link {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
-    padding: 10px 20px; /* Add padding similar to original */
+    padding: 10px 20px; 
     transition: background-color 0.3s;
 }
 
 .custom-nav-links .nav-link:hover,
 .custom-nav-links .nav-link.active {
-    background-color: #b4ab03; /* Slightly different color for hover/active */
+    background-color: #b4ab03; 
     color: #f6eee4;
 }
 
-/* ------------------------------ */
-/* MAIN TEXT                      */
-/* ------------------------------ */
 
 main {
   font-family: "Lora", serif;
@@ -119,14 +104,10 @@ main h3 {
   border-radius: 6px;
 }
 
-/* Specific fix for the Contact page phone link card */
 .tel-link-fix {
     max-width: 300px;
 }
 
-/* ------------------------------ */
-/* FOOTER                         */
-/* ------------------------------ */
 
 .custom-footer-bg {
   background-color: #2ad04c;
@@ -140,9 +121,6 @@ main h3 {
     font-weight: normal;
 }
 
-/* ------------------------------ */
-/* SOCIAL ICONS                   */
-/* ------------------------------ */
 
 .social-icon {
     width: 45px;
@@ -154,9 +132,6 @@ main h3 {
     transform: scale(1.1);
 }
 
-/* ------------------------------ */
-/* MAP / LOCATION STYLES (FINAL ATTEMPT FIX) */
-/* ------------------------------ */
 
 .location-wrapper {
   max-width: 900px;
@@ -170,23 +145,23 @@ main h3 {
 
 .map-container {
   width: 100%;
-  height: 350px; /* CRITICAL HEIGHT */
+  height: 350px; 
   border: 3px solid #000000;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 1rem;
-  position: relative; /* ENSURE CORRECT STACKING CONTEXT */
-  z-index: 1; /* ENSURE IT'S ABOVE BACKGROUNDS/OTHER ELEMENTS */
+  position: relative; 
+  z-index: 1; 
 }
 
 #map {
   width: 100%;
   height: 100%;
-  position: relative; /* ESSENTIAL for Leaflet's internal rendering */
-  z-index: 1; /* ENSURE IT'S ON TOP */
+  position: relative; 
+  z-index: 1; 
 }
 
-/* Styling for the dynamically loaded text on the location page */
+
 .location-info {
   text-align: center;
   font-size: 1.25em;
@@ -195,14 +170,12 @@ main h3 {
   color: #000000;
 }
 
-/* Styling for the button container */
 .location-nav-buttons {
   text-align: center;
 }
 
-/* Ensuring the Bootstrap buttons look correct within the dark theme */
 .location-nav-buttons .btn-dark {
-  color: #f6eee4; /* Light text on dark button */
+  color: #f6eee4; 
   background-color: #000000;
   border-color: #000000;
 }
@@ -210,14 +183,10 @@ main h3 {
 .location-nav-buttons .btn-dark:hover {
   background-color: #6ac482;
   border-color: #6ac482;
-  opacity: 1; /* Ensure hover state is visible */
+  opacity: 1; 
 }
 
-/* ------------------------------ */
-/* BUSINESS LINKS PAGE STYLES (NEW) */
-/* ------------------------------ */
 
-/* Enforce consistent size and centering for all logos on the links page */
 .business-logo {
     width: 150px;  
     height: 100px; 
@@ -226,35 +195,25 @@ main h3 {
     margin: 0 auto 10px auto; 
 }
 
-/* ------------------------------ */
-/* HOMEPAGE PILLAR ICON STYLES (NEWLY ADDED) */
-/* ------------------------------ */
 
 .pillar-icon {
-    /* Set to match the .business-logo size */
+    
     width: 250px;  
     height: 200px;
     
-    /* Center the image block horizontally */
     display: block; 
     margin: 0 auto 10px auto; 
 
     transform: scale(3.0);
     
-    /* Ensures the image scales to fit without distortion */
     object-fit: contain;
 }
 
-
-/* ------------------------------ */
-/* MEDIA QUERIES ADJUSTTED         */
-/* ------------------------------ */
 
 @media screen and (min-width: 481px) {
   
   form { width: 70%; margin: 0 auto; }
   
-  /* Retaining grid for non-Bootstrap elements */
   .grid {
     display: grid;
     grid-template-columns: auto auto;
@@ -266,14 +225,11 @@ main h3 {
   }
 }
 
-/* ========================================================= */
-/* ===============   DESKTOP (min-width: 1000px)  ========== */
-/* ========================================================= */
 
 @media screen and (min-width: 1000px) {
-  /* Simplified desktop nav overrides */
+  
   .custom-nav-links .nav-link {
-    font-size: 1.25em; /* Adjust font size */
+    font-size: 1.25em; 
   }
 
   .grid {
@@ -287,9 +243,6 @@ main h3 {
   }
 }
 
-/* ========================================================= */
-/* ========   4K DESKTOP / LARGE SCREENS (1921px+)   ======= */
-/* ========================================================= */
 
 @media screen and (min-width: 1921px) {
 

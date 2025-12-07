@@ -1,13 +1,5 @@
-/* 
-Author: Donald Moody
-File Name: styles.css
-Date: 11/16/2025
-*/
+// --- Presented by: Donald moody //---
 
-
-// -------------------------
-// Hamburger Menu
-// -------------------------
 function menu() {
    const navlinks = document.getElementById("nav-links");
    const menuicon = document.getElementById("icon");
@@ -23,11 +15,7 @@ function menu() {
    }
 }
 
-// -------------------------
-// Map + Locations
-// -------------------------
 
-// List of locations - UPDATED WITH DAY, TIME, AND TWO NEW MARKETS
 const locations = [
   {
     name: "Hilo Farmers Market",
@@ -67,7 +55,7 @@ const locations = [
     lat: 19.62132, // Coordinates found via search
     lng: -155.03941,
     day: "Second Saturday of the Month",
-    time: "10:00am - 5:00pm" // Set as Varies since specific time wasn't given
+    time: "10:00am - 5:00pm" 
   }
 ];
 
@@ -78,11 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const mapElement = document.getElementById("map");
 
-  // If this page does not contain a map, STOP here.
+  
   if (!mapElement) return;
 
-  // Create map
-  // Note: Leaflet is available globally because it's linked in locations.html <head>
   const map = L.map("map").setView([locations[0].lat, locations[0].lng], 13);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -91,40 +77,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let marker = L.marker([locations[0].lat, locations[0].lng]).addTo(map);
 
-  // Get button elements
+  
   const nextBtn = document.getElementById("next-btn");
   const prevBtn = document.getElementById("prev-btn");
 
-  // Update location on screen + map
+  
   function updateLocation() {
     const loc = locations[index];
 
-    // Get location info elements
+    
     const nameEl = document.getElementById("locationName");
     const addrEl = document.getElementById("address");
     
-    // Get day and time elements (MUST EXIST IN locations.html)
+    
     const dayEl = document.getElementById("day");
     const timeEl = document.getElementById("time");
 
     if (nameEl) nameEl.textContent = loc.name;
     if (addrEl) addrEl.textContent = loc.address;
     
-    // Update day and time content
+    
     if (dayEl) dayEl.textContent = "Day: " + loc.day;
     if (timeEl) timeEl.textContent = "Time: " + loc.time;
 
     map.setView([loc.lat, loc.lng], 13);
     marker.setLatLng([loc.lat, loc.lng]);
 
-    // Update button states
+    
     if (prevBtn) prevBtn.disabled = index === 0;
     if (nextBtn) nextBtn.disabled = index === locations.length - 1;
   }
 
   updateLocation();
 
-  // Next / Previous buttons listeners
+
   if (nextBtn) {
     nextBtn.onclick = () => {
       if (index < locations.length - 1) {
