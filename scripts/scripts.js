@@ -113,9 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
   }
-
+  
   setTimeout(function () {
       map.invalidateSize();
   }, 100);
-
 });
