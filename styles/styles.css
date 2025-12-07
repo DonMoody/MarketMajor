@@ -152,9 +152,37 @@ main h3 {
     transform: scale(1.1);
 }
 
+.site-title-container {
+    padding: 15px 0; /* Add padding above and below title */
+    background-color: #f6eee4; /* Match body background */
+}
+
+.site-title {
+    font-size: 2.5rem; /* Larger font for main title */
+    color: #2a1f14; /* Dark color */
+    margin: 0;
+}
+
+.site-tagline {
+    font-size: 1.5rem; /* Smaller font for tagline */
+    color: #4d3319; /* Slightly lighter dark color */
+    margin: 0;
+}
+
 /* ------------------------------ */
-/* MEDIA QUERIES ADJUSTED         */
+/* HEADER IMAGE & OVERLAY (Cleaned up) */
 /* ------------------------------ */
+
+header {
+    position: relative;
+    /* Removed the header-text-overlay styles as we moved the text out of the header */
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* Remove custom navigation media queries since Bootstrap handles it */
 @media screen and (min-width: 481px) {
