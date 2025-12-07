@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!mapElement) return;
 
   // Create map
+  // Note: Leaflet is available globally because it's linked in locations.html <head>
   const map = L.map("map").setView([locations[0].lat, locations[0].lng], 13);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -68,14 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let marker = L.marker([locations[0].lat, locations[0].lng]).addTo(map);
 
+  // Get button elements
+  // CHANGED IDs to match locations.html: prev-btn and next-btn
+  const nextBtn = document.getElementById("next-btn");
+  const prevBtn = document.getElementById("prev-btn");
+
   // Update location on screen + map
   function updateLocation() {
     const loc = locations[index];
 
+    // Get location info elements
     const nameEl = document.getElementById("locationName");
     const addrEl = document.getElementById("address");
-    const nextBtn = document.getElementById("nextBtn");
-    const prevBtn = document.getElementById("prevBtn");
 
     if (nameEl) nameEl.textContent = loc.name;
     if (addrEl) addrEl.textContent = loc.address;
@@ -83,16 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
     map.setView([loc.lat, loc.lng], 13);
     marker.setLatLng([loc.lat, loc.lng]);
 
+    // Update button states
     if (prevBtn) prevBtn.disabled = index === 0;
     if (nextBtn) nextBtn.disabled = index === locations.length - 1;
   }
 
   updateLocation();
 
-  // Next / Previous buttons (only if present)
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
-
+  // Next / Previous buttons listeners
   if (nextBtn) {
     nextBtn.onclick = () => {
       if (index < locations.length - 1) {
